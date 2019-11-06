@@ -1,11 +1,14 @@
 <div class="row">
     <div class="col-sx-12">
+        <!-- Shopping list form in template driven approach-->
         <form (ngSubmit)="onAddItem(shoppingListForm)" #shoppingListForm="ngForm">
             <div class="row">
+                <!-- Ingredient Name -->
                 <div class="col-sm-5 form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" class="form-control" name="name" ngModel required>
                 </div>
+                <!-- Ingredient Amount -->
                 <div class=" col-sm-5 form-group">
                     <label for="amount">Amount</label>
                     <input type="number" id="amount" class="form-control" name="amount" ngModel required
@@ -13,6 +16,7 @@
                 </div>
             </div>
 
+            <!-- Add/Update, Delete and Cancel Ingredient-->
             <div class="row">
                 <div class="col-xs-12">
                     <button class="btn btn-success" type="submit"
