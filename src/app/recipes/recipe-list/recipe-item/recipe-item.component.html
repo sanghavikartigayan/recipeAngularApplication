@@ -1,4 +1,6 @@
-<a style="cursor: pointer" class="list-group-item clearfix" [routerLink]="[recipeId]" routerLinkActive="active">
+<!-- Individual Recipe item on the list-->
+<a class="list-group-item clearfix" [routerLink]="[recipeId]" routerLinkActive="active">
+    <!-- On recipe item selected navigate to the url appending the recipe id which we got from the recipes component iteration-->
     <div class="pull-left">
         <h4 class="list-group-tem-heading">{{ recipe.name }}</h4>
         <p class="list-group-item-text">{{ recipe.description }}</p>

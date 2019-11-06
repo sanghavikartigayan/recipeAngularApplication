@@ -1,11 +1,14 @@
+<!-- A row that has a button to add new recipe to the list-->
 <div class="row">
   <div class="col-xs-12">
     <button class="btn btn-success" (click)="onNewRecipeClicked()">New Recipe</button>
   </div>
 </div>
 <hr>
+<!-- The next rows would contain the recipe items iterated over the list.-->
 <div class="row">
   <div class="col-xs-12">
+    <!-- Index is needed to know which recipe item in chosen on the list.-->
     <app-recipe-item *ngFor="let recipeElement of recipes; let i = index" [recipe]="recipeElement" [recipeId]="i">
     </app-recipe-item>
   </div>

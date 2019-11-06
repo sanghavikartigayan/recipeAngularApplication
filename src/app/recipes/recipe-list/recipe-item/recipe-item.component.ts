@@ -8,6 +8,8 @@ import { RecipeService } from '../../recipe.service';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
+
+  // Receiving the recipe information and the id from the parent component - Recipes
   @Input() recipe: Recipe;
   @Input() recipeId: number;
   constructor() { }

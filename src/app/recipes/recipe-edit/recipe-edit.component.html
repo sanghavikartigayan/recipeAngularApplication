@@ -1,6 +1,8 @@
 <div class="row">
     <div class="col-xs-12">
+        <!--Recipe edit form - ADD or UPDATE RECIPE-->
         <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+            <!-- Save and Cancel button rows-->
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
@@ -10,6 +12,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Recipe Name Input-->
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
@@ -21,6 +24,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Recipe Image Url Input-->
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
@@ -33,6 +37,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Recipe Image Preview-->
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
@@ -40,6 +45,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Recipe Description Input -->
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
@@ -54,22 +60,23 @@
                 </div>
             </div>
             <hr>
+            <!-- Section to Add recipe Ingredients (FormArray)-->
             <div class="row">
                 <div class="col-xs-12" formArrayName="ingredients">
+                    <!-- Inputs to add recipe ingredients-->
                     <div class="row" *ngFor="let ingredientCtrl of controls; let i = index" [formGroupName]="i"
                         style="margin-top: 10px;">
                         <div class="col-xs-8">
                             <input type="text" class="form-control" formControlName="name">
-
                         </div>
                         <div class="col-xs-2">
                             <input type="text" class="form-control" formControlName="amount">
-
                         </div>
                         <div class="col-xs-2">
                             <button class="btn btn-danger" (click)="onDeleteIngredient(i)">x</button>
                         </div>
                     </div>
+                    <!-- BUtton to add new ingredients - add an form input with controls on click-->
                     <div class="row">
                         <div class="col-xs-12">
                             <button class="btn btn-primary" type="button" style="margin-top: 10px;"
