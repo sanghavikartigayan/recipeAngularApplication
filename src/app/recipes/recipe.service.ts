@@ -20,14 +20,14 @@ export class RecipeService {
       ]),
     new Recipe('Big Fat Burger',
       'What else you need to say?',
-      'https://www.fatburgercanada.com/wp-content/uploads/2018/09/fb18_FatCheeseBeer.png',
+      '../assets/fatburger.jpg',
       [
         new Ingredient('Meat', 1),
         new Ingredient('Buns', 2)
       ]),
     new Recipe('Spagetti',
       'Tasty Spagetti',
-      'https://en.wikipedia.org/wiki/Spaghetti#/media/File:Spaghetti_di_Gragnano_e_colatura_di_alici.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/2/2a/Spaghetti_al_Pomodoro.JPG',
       [
         new Ingredient('Spagetti', 20)
       ])
